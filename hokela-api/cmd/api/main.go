@@ -21,7 +21,7 @@ func main() {
 
 	r := gin.Default()
 
-	api := r.Group("/api")
+	api := r.Group("/api/v1")
 	{
 		api.GET("/ping", handlers.HealthCheck)
 
