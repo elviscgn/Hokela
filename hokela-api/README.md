@@ -1,3 +1,3 @@
 # Hokela API
 
-1. 
+To run: `go run cmd/api/main.go`
