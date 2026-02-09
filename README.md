@@ -1,3 +1,7 @@
 # Hokela
 
-<img src="schema.png"/>
+<img src="assets/ui.png"/> <br>
+
+<img src="assets/schema.png"/> <br>
+
+
