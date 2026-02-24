@@ -23,6 +23,9 @@ func main() {
 	log.Println("Database connection successfully established")
 
 	db.AutoMigrate(&handlers.Customer{})
+	db.AutoMigrate(&handlers.Spaza{})
+	db.AutoMigrate(&handlers.Product{})
+	db.AutoMigrate(&handlers.Order{}, &handlers.OrderItem{})
 
 	port := os.Getenv("PORT")
 	if port == "" {
