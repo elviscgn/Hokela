@@ -26,7 +26,8 @@ func main() {
 	db.AutoMigrate(&handlers.Spaza{})
 	db.AutoMigrate(&handlers.Product{})
 	db.AutoMigrate(&handlers.Order{}, &handlers.OrderItem{})
-
+	db.AutoMigrate(&handlers.Runner{})
+	db.AutoMigrate(&handlers.Review{})
 	port := os.Getenv("PORT")
 	if port == "" {
 		port = "8080"
