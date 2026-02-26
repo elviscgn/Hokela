@@ -78,3 +78,16 @@ func (h *CustomerHandler) DeleteCustomer(c *gin.Context) {
 	}
 	c.JSON(http.StatusOK, gin.H{"message": "Customer deleted successfully!"})
 }
+
+func (h *CustomerHandler) GetAllCustomers(c *gin.Context) {
+	var customers []Customer
+
+	if err := h.DB.Find(&customers).Error; err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to get all customers."})
+		return
+	}
+	c.JSON(http.StatusOK, gin.H{
+		"message":   "All customers successfully retreived!",
+		"customers": customers,
+	})
+}

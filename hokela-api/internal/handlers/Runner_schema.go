@@ -45,7 +45,7 @@ type Runner struct {
 	VehicleType string `json:"vehicle_type"`
 
 	// STATUS
-	//IsOnline        bool   `json:"is_online" gorm:"default:false"`
+	IsOnline bool `json:"is_online" gorm:"default:false"`
 
 	// TIMESTAMPS
 	CreatedAt time.Time `json:"created_at"`
